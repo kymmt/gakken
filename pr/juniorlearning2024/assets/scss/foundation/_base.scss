@@ -9,10 +9,10 @@ body {
 }
 
 .wrapper {
-  background: #fafbe1;
   padding-bottom: 100px;
   position: relative;
   overflow: hidden;
+  background: #fafbe1 url("../img/bg_wave_bottom.png") no-repeat center bottom / 100% auto;
   &::before {
     position: absolute;
     content: "";
