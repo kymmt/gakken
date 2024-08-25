@@ -7,18 +7,8 @@ var iso = new Isotope(".filtr-container", {
 
 // フィルターを適用する関数
 function applyFilter(filterValue) {
-  const container = document.querySelector(".filtr-container");
-
-  // 既存のfilter-*クラスを削除
-  container.classList.forEach((cls) => {
-    if (cls.startsWith("filter-")) {
-      container.classList.remove(cls);
-    }
-  });
-
   if (filterValue === "*") {
     iso.arrange({ filter: "*" });
-    container.classList.add("filter-all"); // 全て表示のクラスを追加
   } else {
     iso.arrange({
       filter: function (itemElem) {
@@ -26,7 +16,6 @@ function applyFilter(filterValue) {
         return categories.includes(filterValue);
       },
     });
-    container.classList.add(`filter-${filterValue}`); // 選択中のフィルタークラスを追加
   }
 
   // ボタンのクラスをリセットしてから、状態を更新
@@ -42,6 +31,13 @@ function applyFilter(filterValue) {
   const activeButton = document.querySelector(`[data-filter="${filterValue}"]`);
   if (activeButton && filterValue !== "*") {
     activeButton.classList.add("is-active");
+  }
+
+  // 現在のフィルターに対応するクラスを.filtr-container要素に付与
+  const filtrContainer = document.querySelector(".filtr-container");
+  filtrContainer.className = "filtr-container"; // 既存のクラスをリセット
+  if (filterValue !== "*") {
+    filtrContainer.classList.add(`filter-${filterValue}`);
   }
 }
 
@@ -72,18 +68,27 @@ buttons.forEach((button) => {
     if (button.matches(".l-header__nav__button[data-filter]")) {
       if (!isElementInView(localNav)) {
         // 要素がビュー内にない場合はスクロールしてからフィルターを適用
-        localNav.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest",
-        });
+        const startPosition = window.pageYOffset;
+        const targetPosition = localNav.getBoundingClientRect().top + startPosition;
+        const duration = 300; // スクロールの時間（ミリ秒）
 
-        const onScroll = () => {
-          window.removeEventListener("scroll", onScroll);
-          executeFiltering(filterValue);
-        };
+        const startTime = performance.now();
 
-        window.addEventListener("scroll", onScroll);
+        function scrollAnimation(currentTime) {
+          const elapsedTime = currentTime - startTime;
+          const easeInOutQuad = (t) => t; // イージングをlinearに
+          const run = easeInOutQuad(elapsedTime / duration) * (targetPosition - startPosition) + startPosition;
+
+          window.scrollTo(0, run);
+
+          if (elapsedTime < duration) {
+            requestAnimationFrame(scrollAnimation);
+          } else {
+            executeFiltering(filterValue);
+          }
+        }
+
+        requestAnimationFrame(scrollAnimation);
       } else {
         executeFiltering(filterValue);
       }
@@ -118,13 +123,4 @@ window.addEventListener("popstate", function () {
 const navBtn = document.querySelector(".l-header__nav__toggle");
 navBtn.addEventListener("click", function () {
   this.parentElement.classList.toggle("is-active");
-});
-
-document.addEventListener("scroll", function () {
-  const backToTop = document.querySelector(".back-to-top-container");
-  if (window.scrollY > 200) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
 });
