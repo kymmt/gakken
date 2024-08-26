@@ -558,6 +558,10 @@ body {
   border: 3px solid red;
 }
 
+.hover-fade {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
 .hover-fade:hover {
   opacity: 0.6;
 }
