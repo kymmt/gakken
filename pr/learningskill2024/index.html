@@ -23,17 +23,485 @@
 <body>
   <div class="wrapper">
     <header class="l-header">
-      <div class="l-header__logo"></div>
+      <div class="l-header__logo"><img src="./assets/img/logo.svg" alt="Gakken"></div>
       <nav class="l-header__nav">
+        <div class="l-header__nav__toggle">
+          <button class="hamburger hamburger--squeeze md:hidden" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
         <ul class="l-header__nav__list">
-          <li class="l-header__nav__item">スキルアップ</li>
-          <li class="l-header__nav__item">お金</li>
-          <li class="l-header__nav__item">語学</li>
-
+          <li class="l-header__nav__item"><button class="l-header__nav__button" data-filter="skill-up">スキルアップ</button></li>
+          <li class="l-header__nav__item"><button class="l-header__nav__button" data-filter="money">お金</button></li>
+          <li class="l-header__nav__item"><button class="l-header__nav__button" data-filter="language">語学</button></li>
         </ul>
       </nav>
     </header>
+    <div class="wrapper__inner">
+      <main class="main" role="main">
+        <div class="bg-obj obj1"></div>
+        <div class="bg-obj obj2"></div>
+        <div class="bg-obj obj3"></div>
+        <div class="bg-obj obj4"></div>
+        <div class="bg-obj obj5"></div>
+        <div class="c-mv">
+          <p class="c-mv__lead">新しいチャレンジをはじめよう！</p>
+          <h1 class="c-mv__title">リスキリングで<br>
+            キャリアアップを応援！</h1>
+          <p class="c-mv__intro">新しいスキルを身につけることで、<br class="md:hidden">キャリアアップ！<br>
+            学研のリスキリング学習では、<br class="md:hidden">時代の変化に対応するために<br>
+            必要な知識とスキルを体系的に学べます。<br>
+            自分の可能性を広げる<br class="md:hidden">第一歩を踏み出しましょう。</p>
+        </div>
 
+        <nav class="filter-nav">
+          <h2 class="filter-nav__title">— 気になるスキルを選択 —</h2>
+          <ul class="filter-nav__list">
+            <li class="filter-nav__item"><button class="filter-nav__button skill-up" data-filter="skill-up">スキルアップ</button></li>
+            <li class="filter-nav__item"><button class="filter-nav__button money" data-filter="money">お金</button></li>
+            <li class="filter-nav__item"><button class="filter-nav__button language" data-filter="language">語学</button></li>
+          </ul>
+        </nav>
+
+
+        <div class="container">
+          <div class="filtr-container">
+            <section class="c-block filtr-item sec1" data-category="money">
+              <div class="tag">
+                <div class="tag__item money">お金</div>
+              </div>
+              <p class="c-block__lead">Gakkenのオンライン学習サービス</p>
+              <div class="c-block__logo">
+                <img src="./assets/img/logo_shikaku-pass.png" alt="合格を、もっと気軽に。Shikaku Pass" width="300">
+              </div>
+              <p class="c-block__intro">動画によるプロ講師の丁寧なレクチャーと、頻出問題が厳選された過去問演習を、オンラインで手軽に行うことができる新しい学習サービスです。資格合格を目指す方はもちろん、これまで学んだ内容をもう一度おさらいしたい方や、お金などの生活や仕事に役立つ知識を身につけたい方にもおすすめです。</p>
+
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title">お金の知識</h2>
+                  <div class="c-block__content__body">
+                    <p>資格取得はもちろん、お金の知識を正しく身につけることができる講座です。仕事だけではなく、子供の教育資金や、自分の老後に備えるために役立ちます。</p>
+                    <ul class="c-block__content__list">
+                      <li>ファイナンシャル・プランナー３級</li>
+                      <li>ファイナンシャル・プランナー２級</li>
+                      <li>ファイナンシャル・プランナー３・２級</li>
+                      <li>資産形成コンサルタント</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <a href="https://shikakupass.com/feature-fp/" class="hover-fade" target="_blank"><img src="./assets/img/img_sec1.png" alt="お金のスキルアップキャンペーン" /></a>
+                </div>
+
+              </div>
+
+              <div class="c-block__btns grid-cols-1">
+                <a class="btn hover-fade" href="https://shikakupass.com/feature-fp/" target="_blank">詳しくはこちら</a>
+              </div>
+              <div class="c-block__btns grid-cols-3">
+                <div class="c-block__btn-item">
+                  <span class="btn__label">＼ 脱お金の不安クイズ実施中！／</span>
+                  <a class="btn hover-fade" href="#" target="_blank">
+                    LINEに登録
+                  </a>
+                </div>
+                <div class="c-block__btn-item">
+                  <span class="btn__label">＼ お金の知識をインスタで配信中！／</span>
+                  <a class="btn hover-fade" href="https://www.instagram.com/money_shikakupass/" target="_blank">インスタを見る</a>
+                </div>
+
+                <div class="c-block__footer-logo"><img src="./assets/img/logo_g-leap.png" width="211" alt="G LEAP" /></div>
+              </div>
+            </section>
+
+            <section class="c-block filtr-item sec2" data-category="skill-up">
+              <div class="tag">
+                <div class="tag__item skill-up">スキルアップ</div>
+              </div>
+              <p class="c-block__lead">Gakkenのオンライン学習サービス</p>
+              <div class="c-block__logo">
+                <img src="./assets/img/logo_shikaku-pass.png" alt="合格を、もっと気軽に。Shikaku Pass" width="300">
+              </div>
+              <p class="c-block__intro color-red">動画によるプロ講師の丁寧なレクチャーと、頻出問題が厳選された過去問演習を、オンラインで手軽に行うことができる新しい学習サービスです。資格合格を目指す方はもちろん、これまで学んだ内容をもう一度おさらいしたい方や、お金などの生活や仕事に役立つ知識を身につけたい方にもおすすめです。</p>
+
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title">スキルアップ</h2>
+                  <div class="c-block__content__body">
+                    <p>人気の宅建や社会人として身につけておきたいIT知識などの講座も充実。まずは無料体験からスタート！</p>
+                    <ul class="c-block__content__list">
+                      <li>宅建　…キャンペーン実施中</li>
+                      <li>ITパスポート…9月よりキャンペーン実施</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <a href="#" class="hover-fade"><img src="./assets/img/img_sec2.png" alt="2024年度 試験直前対策！" /></a>
+                </div>
+              </div>
+              <div class="c-block__btns grid-cols-1">
+                <a class="btn hover-fade" href="#">詳しくはこちら</a>
+              </div>
+
+              <div class="c-block__footer-logo"><img src="./assets/img/logo_g-leap.png" width="211" alt="G LEAP" /></div>
+
+            </section>
+
+            <section class="c-block filtr-item sec3" data-category="skill-up">
+              <div class="tag">
+                <div class="tag__item skill-up">スキルアップ</div>
+              </div>
+              <p class="c-block__lead">Gakkenの社会人向けリスキリング</p>
+              <div class="c-block__logo">
+                <img src="./assets/img/logo_asubeto.png" alt="ASUBETO POWERED BY TOASU" width="300">
+              </div>
+              <p class="c-block__intro md:txt-center">企業と個人の学びと成長を支援する。ASUBeTOは、日本で初めてのPSSです！</p>
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title">述べ１００万人以上が利用する<br>
+                    研修設計の専門家が監修した<br>
+                    人材育成プラットフォーム</h2>
+                  <div class="c-block__content__body">
+                    <p>『ASUBeTO（アスビト）』は総務、人事、教育などの業務を効率化し、社員同士の学び合いを促進することで、企業の生産性を向上させるLMS（学習管理システム）です。大企業から個人まで、誰でも簡単に始められ、コスト削減、業務効率化、人材育成といった効果が期待できます。初期費用無料、月額33,000円～スタートできます。</p>
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <img src="./assets/img/img_sec3_1.png" alt="ASUBeTOによる学びと仕事仕事のエコシステム" />
+                </div>
+              </div>
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title">企業の現場で使われている、<br class="md:hidden">実務に<br class="sm:hidden">役立つコンテンツを<br class="md:hidden">ラインナップ！</h2>
+                  <div class="c-block__content__body">
+                    <p>ITインフラからプログラミング、データサイエンス、AIまで、幅広いITスキルを体系的に学べる教材が満載。三井化学や電通PRコンサルティングの独占教材も！実務で役立つスキルを習得し、キャリアアップを目指せます。</p>
+
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <img src="./assets/img/img_sec3_2.png" alt="ASUBeTO Store" />
+                </div>
+              </div>
+              <div class="c-block__btns grid-cols-1">
+                <a class="btn hover-fade" href="https://www.asubeto.jp/" target="_blank">詳しくはこちら</a>
+              </div>
+
+              <div class="c-block__footer-logo"><img src="./assets/img/logo_toasu.png" width="210" alt="TOASU Gakken Group" /></div>
+
+            </section>
+
+            <section class="c-block filtr-item sec4" data-category="language">
+              <div class="tag">
+                <div class="tag__item language">語学</div>
+              </div>
+              <p class="c-block__lead">Gakkenのオンライン学習サービス</p>
+              <div class="c-block__logo">
+                <img src="./assets/img/logo_shikaku-pass.png" alt="合格を、もっと気軽に。Shikaku Pass" width="300">
+              </div>
+              <p class="c-block__intro color-red">動画によるプロ講師の丁寧なレクチャーと、頻出問題が厳選された過去問演習を、オンラインで手軽に行うことができる新しい学習サービスです。資格合格を目指す方はもちろん、これまで学んだ内容をもう一度おさらいしたい方や、お金などの生活や仕事に役立つ知識を身につけたい方にもおすすめです。</p>
+
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title">語 学</h2>
+                  <div class="c-block__content__body">
+                    <p>「TOEICをこれから受験したい」「そもそも英語が苦手」
+                      そんな方に向けた講座です。
+                      単語・文法・リスニングなどの基礎知識も網羅。
+                      レベル別学習で英語の基礎からスコアアップを目指すことができます。
+                    </p>
+                    <p class="strong">まずは7日間無料体験でお試しください。</p>
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <a href="https://shikakupass.com/toeic/" class="hover-fade"><img src="./assets/img/img_sec4.png" alt="英語の基礎を攻略する！＝TOEIC600+ いますぐ！７日間無料体験 詳しくはこちら" /></a>
+                </div>
+              </div>
+
+              <div class="c-block__btns grid-cols-1">
+                <a class="btn hover-fade" href="https://shikakupass.com/toeic/" target="_blank">詳しくはこちら</a>
+              </div>
+
+              <div class="c-block__footer-logo"><img src="./assets/img/logo_g-leap.png" width="211" alt="G LEAP" /></div>
+
+            </section>
+
+            <section class="c-block filtr-item sec5" data-category="language">
+              <div class="tag">
+                <div class="tag__item language">語学</div>
+              </div>
+              <p class="c-block__lead">Gakkenのオンライン英会話レッスン</p>
+              <div class="c-block__logo">
+                <img src="./assets/img/logo_kimini.png" alt="kimini" width="320">
+              </div>
+              <p class="c-block__intro">英会話の際に必要な基本的な英文法を学びながら、スピーキング力を鍛えていくことができるコースです。AIが学習者一人ひとりの学習状況を分析し、事前学習（予習）のデータに基づき、オンラインレッスンの内容を個別最適化することで、インプットとアウトプットをバランスよく行うことができます。</p>
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title">Kimini Plus コース</h2>
+                  <div class="c-block__content__body">
+                    <p>英会話の際に必要な基本的な英文法を学びながら、スピーキング力を鍛えていくことができるコースです。AIが学習者一人ひとりの学習状況を分析し、事前学習（予習）のデータに基づき、オンラインレッスンの内容を個別最適化することで、インプットとアウトプットをバランスよく行うことができます。
+                    </p>
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <img src="./assets/img/img_sec5_1.png" alt="" />
+                </div>
+              </div>
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title">英検®合格コース</h2>
+                  <div class="c-block__content__body">
+                    <p>学研の人気書籍「英検をひとつひとつわかりやすく。」シリーズをもとにしたコースです。英検合格に必要な語彙や文法の学習に加えて、3級～2級は二次試験対策の模擬試験レッスンも含まれています。</p>
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <img src="./assets/img/img_sec5_2.png" alt="" />
+                </div>
+              </div>
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title">トータルスピーキングコース</h2>
+                  <div class="c-block__content__body">
+                    <p>スピーキング力強化に特化したコースで、実践的な英語力を身につけることができます。理由や詳細の情報の説明をしながら、英語を話す練習をするので、表現の幅を広げたり、応用力をつけることができます。</p>
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <img src="./assets/img/img_sec5_3.png" alt="" />
+                </div>
+              </div>
+
+              <div class="c-block__content">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title with-line">料金プラン</h2>
+                  <div class="c-block__content__body txt-center">
+                    <table class="c-block__price-table">
+                      <tr>
+                        <th>●スタンダードPlusプラン<br class="md:hidden">「人気No.1」</th>
+                        <td>月額6,800円（税込7,480円）</td>
+                      </tr>
+                      <tr>
+                        <th>●ウィークデイプラン<br class="md:hidden"> 「割安でイチオシ」</th>
+                        <td>月額4,400円（税込4,840円）</td>
+                      </tr>
+                      <tr>
+                        <th>●ウィークデイPlusプラン<br class="md:hidden"> 「平日の日中がオトク」</th>
+                        <td>月額5,400円（税込5,940円）</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="c-block__btns grid-cols-1">
+                <a class="btn hover-fade" href="https://kimini.online/" target="_blank">詳しくはこちら</a>
+              </div>
+
+              <div class=" c-block__footer-logo"><img src="./assets/img/logo_glats.png" width="211" alt="Glats" />
+              </div>
+
+            </section>
+
+            <section class="c-block filtr-item sec6" data-category="language">
+              <div class="tag">
+                <div class="tag__item language">語学</div>
+              </div>
+              <p class="c-block__lead">Gakkenのオンライン中国語レッスン</p>
+              <div class="c-block__logo">
+                <img src="./assets/img/logo_cclesson.png" alt="CC LESSON" width="320">
+              </div>
+              <p class="c-block__intro md:txt-center color-red">業界最大級！ 豊富なレッスン数・講師数<br class="sm:hidden md:block">CCレッスンには約500人の豊富な講師が常にレッスンを開講しています。<br class="sm:hidden md:block">そのため、開催レッスン数が多く好きな時間にレッスンを受けることができます。講師の特性も様々で<br>あなたの興味のある話題や話したい方言に対応した講師がきっと見つかります。</p>
+
+              <div class="c-block__content flex-col">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title sm:block md:hidden lg:block">語学</h2>
+                  <div class="c-block__content__body">
+                    <p class="strong">生徒と講師の直接取引システム</p>
+                    <p>CCレッスンは講師と生徒をつなぐ、CtoCプラットフォーム型のオンライン中国語/英会話教室です。生徒さんと講師が直接取引することによって、人件費やマージンを最大限削減し、より低価格でレッスンを提供しているすることができます。CCレッスンを始めるために必要なものは、パソコン・インターネット・ヘッドセットやマイク・SkypeやWeChatなど無料の音声チャットアプリだけ。中国全土から様々なバックボーンを持った講師が集まっています。あなたに合った講師を探してみましょう。</p>
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <img src="./assets/img/img_sec6_1.png" alt="" />
+                </div>
+              </div>
+
+              <div class="c-block__btns grid-cols-1">
+                <a class="btn hover-fade" href="#">詳しくはこちら</a>
+              </div>
+
+              <div class="c-block__footer-logo"><img src="./assets/img/logo_gakken_cc.png" width="292" alt="GAKKEN CC" /></div>
+
+            </section>
+
+            <section class="c-block filtr-item sec7" data-category="language">
+              <div class="tag">
+                <div class="tag__item language">語学</div>
+              </div>
+              <p class="c-block__lead">Gakkenのオンライン多言語学習サービス</p>
+              <div class="c-block__logo">
+                <img src="./assets/img/logo_talking-time.png" alt="Talking Time" width="310">
+              </div>
+              <p class="c-block__intro md:txt-center">「TalkingTime」は、国内初（※1）のオンライン多言語学習サービスで、<br>
+                英語や中国語を除いた第三言語（※2）を広く学ぶことができます。<br>オンラインで各言語のネイティブスピーカーとつなぎ、1対1の自由な会話を通じて、<br>話す力・伝わる力を伸ばす会話型レッスンを行っています。</p>
+              <div class="txt-right">
+                <p class="c-block__intro-note">
+                  ※1：語学を専門とするオンライン会話のCtoCマッチングサービスでは国内初。株式会社GAKKEN CC調べ。<br>
+                  ※2：現在は、韓国語、フランス語、ドイツ語、スペイン語に対応。対応言語は今後増える予定です。</p>
+              </div>
+
+              <div class="c-block__content flex-col">
+                <div class="c-block__content__text">
+                  <h2 class="c-block__content__title sm:block md:hidden lg:block">語学</h2>
+                  <div class="c-block__content__body">
+                    <p class="strong">オンライン会話の<br class="md:hidden">マッチングサービス</p>
+                    <p>英語や中国語を除いた第三言語を広く学ぶことができます。オンラインで各言語のネイティブスピーカーとつなぎ、1対1の自由な会話を通じて、話す力・伝わる力を伸ばす会話型レッスンを行っています。趣味や教養を広げるためのものとしての第三言語の学習の機会を提供します。近年、K-POPや韓国ドラマの人気が世界中で急上昇し、若者から中高年まで幅広い世代に渡り、韓国語の学習ニーズが急速に高まっています。またビジネス面でも、韓国は世界有数の経済大国であり、多くのグローバル企業が韓国に拠点を持っているため、韓国語を話せることは大きな強みになります。これらの背景を受け、『TalkingTime』では韓国語に特に注力した学習環境を整えました。</p>
+
+                  </div>
+                </div>
+                <div class="c-block__content__image">
+                  <img src="./assets/img/img_sec7_1.png" alt="ASUBeTO Store" />
+                </div>
+              </div>
+              <div class="c-block__btns grid-cols-1">
+                <a class="btn hover-fade" href="#">詳しくはこちら</a>
+              </div>
+
+              <div class="c-block__footer-logo"><img src="./assets/img/logo_gakken_cc.png" width="292" alt="GAKKEN CC" /></div>
+
+            </section>
+
+
+          </div>
+          <section class="c-block c-block__book-section sec8">
+            <div class="c-block__logo">
+              <img src="./assets/img/logo_gakken-shuppan-site.png" alt="Gakken 学研出版サイト" width="300">
+            </div>
+            <p class="c-block__intro md:txt-center">Gakkenおすすめの書籍で、お金の知識を増やし、<br class="sm:hidden">語学などのスキルアップで１つ上のキャリアをめざして行きましょう</p>
+
+
+            <div class="filtr-books">
+              <div class="c-block__books filtr-book-item sec8_1" data-category="money">
+                <div class="tag">
+                  <div class="tag__item money">お金</div>
+                </div>
+                <h3 class="book__title money">おすすめのお金の知識書籍</h3>
+
+                <div class="book__list">
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_money_1.png" alt="知りたいことがぜんぶわかる！新ＮＩＳＡ＆ｉＤｅＣｏの超基本" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1340692100" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_money_2.png" alt="経済評論家の父から息子への手紙 お金と人生と幸せについて" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1340697500" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_money_3.png" alt="まんがで読破　資本論" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1340693300" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_money_4.png" alt="２０２４－２０２５年版　ＦＰ３級をひとつひとつわかりやすく。《教科書》" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/2380227700" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_money_5.png" alt="お金の増やし方がぜんぶわかる！　新ＮＩＳＡ超活用術" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1340697400" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_money_6.png" alt="マンガでカンタン！社会保障で得するお金は７日間でわかります。" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1340697200" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-block__books filtr-book-item sec8_2" data-category="language">
+                <div class="tag">
+                  <div class="tag__item language">語学</div>
+                </div>
+                <h3 class="book__title language">おすすめの語学書籍</h3>
+                <div class="book__list grid-cols-2">
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_language_1.png" alt="魔法の暗記術！　ディズニー映画で身につく　そのまま使える英会話フレーズ" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1130575000" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_language_2.png" alt="中学英語をもう一度ひとつひとつわかりやすく。改訂版" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1130548200" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-block__books filtr-book-item sec8_3" data-category="skill-up">
+                <div class="tag">
+                  <div class="tag__item skill-up">スキルアップ</div>
+                </div>
+                <h3 class="book__title language">おすすめのスキルアップ書籍</h3>
+
+                <div class="book__list grid-cols-2">
+                  <div class="book__item chatgpt">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_skill-up_1.png" alt="ビジネスパーソンのためのＣｈａｔＧＰＴ活用大全 毎日の仕事が一気に変わる！" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1340695600" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                  <div class="book__item">
+                    <div class="book__item__image">
+                      <img src="./assets/img/book_skill-up_2.png" alt="マンガでカンタン！ＳＮＳマーケティングは７日間でわかります。" />
+                    </div>
+                    <div class="book__item__link">
+                      <a class="btn hover-fade" href="https://hon.gakken.jp/book/1340696500" target="_blank">購入はこちら</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="back-to-top-container">
+      <a href="#top" class="back-to-top hover-fade">
+        <img src="./assets/img/btn_page-top.svg" alt="" />
+        TOPへ戻る
+      </a>
+    </div>
+    <footer class=" l-footer">
+      <div class="l-footer__logo">
+        <img src="./assets/img/footer_logo.svg" alt="今日、いくつ挑戦した？ Gakken" />
+      </div>
+    </footer>
   </div>
+  <script src="./assets/js/isotope.min.js" defer></script>
+  <script src="./assets/js/scripts.js" defer></script>
 </body>
 </html>
