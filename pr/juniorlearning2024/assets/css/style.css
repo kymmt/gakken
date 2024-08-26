@@ -443,6 +443,7 @@ body {
 .bg-obj {
   position: absolute;
   content: "";
+  pointer-events: none;
 }
 .bg-obj.obj1 {
   top: 748px;
@@ -1656,11 +1657,11 @@ body {
   }
   .kentei__title-decoration::before {
     background: url("../img/bg_kentei_l.png") no-repeat left top/cover;
-    left: -8rem;
+    left: -16.2162162162vw;
   }
   .kentei__title-decoration::after {
     background: url("../img/bg_kentei_r.png") no-repeat right bottom/cover;
-    right: -8rem;
+    right: -16.2162162162vw;
   }
   .c-block__header .kentei__title-decoration::before {
     top: 0.2em;
@@ -1837,11 +1838,11 @@ body {
     content: "";
   }
   .c-block__header .drill__title-decoration::before {
-    left: -8rem;
+    left: -14.8648648649vw;
     top: 0.2em;
   }
   .c-block__header .drill__title-decoration::after {
-    right: -8rem;
+    right: -14.8648648649vw;
     bottom: 0.2em;
   }
   .drill__book-list {

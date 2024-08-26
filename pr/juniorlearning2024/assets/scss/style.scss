@@ -1064,11 +1064,11 @@
       }
       &::before {
         background: url("../img/bg_kentei_l.png") no-repeat left top / cover;
-        left: -8rem;
+        left: calc(-60 / 370 * 100vw);
       }
       &::after {
         background: url("../img/bg_kentei_r.png") no-repeat right bottom / cover;
-        right: -8rem;
+        right: calc(-60 / 370 * 100vw);
       }
       .c-block__header & {
         &::before {
@@ -1259,11 +1259,11 @@
           content: "";
         }
         &::before {
-          left: -8rem;
+          left: calc(-55 / 370 * 100vw);
           top: 0.2em;
         }
         &::after {
-          right: -8rem;
+          right: calc(-55 / 370 * 100vw);
           bottom: 0.2em;
         }
       }

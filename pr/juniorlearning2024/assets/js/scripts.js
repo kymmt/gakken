@@ -124,7 +124,13 @@ const navBtn = document.querySelector(".l-header__nav__toggle");
 navBtn.addEventListener("click", function () {
   this.parentElement.classList.toggle("is-active");
 });
-
+const headerFilterBtn = document.querySelectorAll(".l-header__nav__button");
+headerFilterBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    console.log("click");
+    document.querySelector(".l-header__nav").classList.remove("is-active");
+  });
+});
 document.addEventListener("scroll", function () {
   const backToTop = document.querySelector(".back-to-top-container");
   if (window.scrollY > 200) {

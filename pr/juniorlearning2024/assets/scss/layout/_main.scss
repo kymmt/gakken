@@ -4,6 +4,7 @@
 .bg-obj {
   position: absolute;
   content: "";
+  pointer-events: none;
   &.obj1 {
     top: 748px;
     left: calc(50% + (1282px - (1440px / 2)));
