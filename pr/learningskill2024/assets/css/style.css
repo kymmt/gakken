@@ -591,7 +591,7 @@ body {
 }
 .c-mv__lead {
   text-align: center;
-  font-size: 33.909px;
+  font-size: 34px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 50.864px */
@@ -613,6 +613,24 @@ body {
   font-weight: 600;
   line-height: 174%; /* 36.54px */
   letter-spacing: 1.05px;
+}
+@media (min-width: 901px) and (max-width: 1400px) {
+  .c-mv {
+    background: url("../img/bg_mv.png") no-repeat center top/98vw 50.1428571429vw;
+    height: 50.1428571429vw;
+    padding-top: 9.1428571429vw;
+  }
+  .c-mv__lead {
+    font-size: 2.4285714286vw;
+    margin-bottom: 1.5vw;
+  }
+  .c-mv__title {
+    font-size: 4.4285714286vw;
+    margin-bottom: 2.2857142857vw;
+  }
+  .c-mv__intro {
+    font-size: 1.5vw;
+  }
 }
 @media (min-width: 750px) and (max-width: 900px) {
   .c-mv {
