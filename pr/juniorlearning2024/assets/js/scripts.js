@@ -6,8 +6,7 @@ window.window.addEventListener("load", function () {
     transitionDuration: "0.6s", // アニメーションの持続時間
   });
   imagesLoaded(".filtr-container", function () {
-    console.log("image loaded");
-    iso.layout();
+    iso.arrante({ filter: "*" });
   });
 
   // フィルターを適用する関数
