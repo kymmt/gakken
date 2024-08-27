@@ -1078,11 +1078,6 @@ body {
   }
 }
 
-.filtr-container {
-  -webkit-transition: height 0.3s ease;
-  transition: height 0.3s ease;
-}
-
 .intro {
   font-size: 2rem;
   font-weight: 600;
