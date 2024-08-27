@@ -5,6 +5,9 @@ window.window.addEventListener("load", function () {
     layoutMode: "vertical",
     transitionDuration: "0.6s", // アニメーションの持続時間
   });
+  imagesLoaded(".filtr-container", function () {
+    iso.layout();
+  });
 
   // フィルターを適用する関数
   function applyFilter(filterValue) {
