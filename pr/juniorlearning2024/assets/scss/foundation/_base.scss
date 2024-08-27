@@ -12,14 +12,14 @@ body {
   padding-bottom: 100px;
   position: relative;
   overflow: hidden;
-  background: #fafbe1 url("../img/bg_wave_bottom.png") no-repeat center bottom / 100% auto;
+  background: #fafbe1 url("../img/bg_wave_bottom.webp") no-repeat center bottom / 100% auto;
   &::before {
     position: absolute;
     content: "";
     top: 3562px;
     width: 100%;
     height: 2933px;
-    background: url("../img/bg_wave_mid_top.png") no-repeat center top,
-      #e2f4f3 url("../img/bg_wave_mid_bottom.png") no-repeat center bottom;
+    background: url("../img/bg_wave_mid_top.webp") no-repeat center top,
+      #e2f4f3 url("../img/bg_wave_mid_bottom.webp") no-repeat center bottom;
   }
 }
