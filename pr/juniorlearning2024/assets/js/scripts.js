@@ -1,4 +1,4 @@
-window.on("load", function () {
+window.window.addEventListener("load", function () {
   // Isotopeの初期化
   var iso = new Isotope(".filtr-container", {
     itemSelector: ".filtr-item",
