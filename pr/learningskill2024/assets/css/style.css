@@ -943,6 +943,8 @@ body {
 }
 
 .filter-nav {
+  position: relative;
+  z-index: 10;
   margin-bottom: 72px;
 }
 .filter-nav__title {
