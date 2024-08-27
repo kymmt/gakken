@@ -144,7 +144,6 @@ navBtn.addEventListener("click", function () {
 const headerFilterBtn = document.querySelectorAll(".l-header__nav__button");
 headerFilterBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
-    console.log("click");
     document.querySelector(".l-header__nav").classList.remove("is-active");
   });
 });
@@ -156,4 +155,11 @@ document.addEventListener("scroll", function () {
   } else {
     backToTop.classList.remove("show");
   }
+});
+
+//MV用アニメーション
+const spans = document.querySelectorAll(".c-mv span");
+
+spans.forEach((span, index) => {
+  span.classList.add("anim");
 });

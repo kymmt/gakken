@@ -185,6 +185,17 @@
     line-height: 150%; /* 50.864px */
     letter-spacing: 1.695px;
     margin-bottom: 21px;
+    overflow: hidden;
+    span {
+      display: inline-block;
+      transform: translateY(100%);
+      transition: all 0.2s;
+      opacity: 0;
+      &.anim {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
   &__title {
     color: #094;
@@ -193,14 +204,36 @@
     font-weight: 700;
     line-height: 140%;
     margin-bottom: 32px;
+    overflow: hidden;
+    span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: all 0.2s;
+      &.anim {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
   &__intro {
     text-align: center;
     font-size: 21px;
     font-style: normal;
     font-weight: 600;
-    line-height: 174%; /* 36.54px */
+    line-height: 175%;
     letter-spacing: 1.05px;
+    overflow: hidden;
+    span {
+      display: inline-block;
+      transform: translateY(100%);
+      transition: all 0.2s;
+      opacity: 0;
+      &.anim {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
   @media (min-width: 901px) and (max-width: 1400px) {
     background: url("../img/bg_mv.png") no-repeat center top / calc(1372 / 1400 * 100vw) calc(702 / 1400 * 100vw);
@@ -408,6 +441,7 @@
     margin-bottom: 43px;
     &-note {
       display: inline-flex;
+      flex-direction: column;
       font-size: 1.2rem;
       margin-bottom: 23px;
       transform: translateY(-2em);
@@ -631,6 +665,14 @@
     &__intro {
       font-size: calc(16 / 370 * 100vw);
       margin-bottom: calc(36 / 370 * 100vw);
+      &-note {
+        font-size: calc(12 / 370 * 100vw);
+        margin-bottom: calc(20 / 370 * 100vw);
+        li {
+          padding-left: 2.5em;
+          text-indent: -2.5em;
+        }
+      }
     }
     &__content {
       margin-bottom: calc(25 / 370 * 100vw);
@@ -756,6 +798,13 @@
       width: 221px;
     }
     &__image {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        inset: 0;
+        border: 1px solid #d9d9d9;
+      }
     }
     &__link {
       text-align: center;

@@ -597,6 +597,20 @@ body {
   line-height: 150%; /* 50.864px */
   letter-spacing: 1.695px;
   margin-bottom: 21px;
+  overflow: hidden;
+}
+.c-mv__lead span {
+  display: inline-block;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 0;
+}
+.c-mv__lead span.anim {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .c-mv__title {
   color: #094;
@@ -605,14 +619,42 @@ body {
   font-weight: 700;
   line-height: 140%;
   margin-bottom: 32px;
+  overflow: hidden;
+}
+.c-mv__title span {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.c-mv__title span.anim {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .c-mv__intro {
   text-align: center;
   font-size: 21px;
   font-style: normal;
   font-weight: 600;
-  line-height: 174%; /* 36.54px */
+  line-height: 175%;
   letter-spacing: 1.05px;
+  overflow: hidden;
+}
+.c-mv__intro span {
+  display: inline-block;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 0;
+}
+.c-mv__intro span.anim {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 @media (min-width: 901px) and (max-width: 1400px) {
   .c-mv {
@@ -838,6 +880,10 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 1.2rem;
   margin-bottom: 23px;
   -webkit-transform: translateY(-2em);
@@ -1078,6 +1124,14 @@ body {
     font-size: 4.3243243243vw;
     margin-bottom: 9.7297297297vw;
   }
+  .c-block__intro-note {
+    font-size: 3.2432432432vw;
+    margin-bottom: 5.4054054054vw;
+  }
+  .c-block__intro-note li {
+    padding-left: 2.5em;
+    text-indent: -2.5em;
+  }
   .c-block__content {
     margin-bottom: 6.7567567568vw;
     -webkit-box-orient: vertical;
@@ -1207,6 +1261,15 @@ body {
 }
 .book__item.chatgpt {
   width: 221px;
+}
+.book__item__image {
+  position: relative;
+}
+.book__item__image::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  border: 1px solid #d9d9d9;
 }
 .book__item__link {
   text-align: center;
