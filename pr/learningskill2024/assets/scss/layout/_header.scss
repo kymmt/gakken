@@ -5,6 +5,7 @@
   position: sticky;
   top: 0;
   padding: 0 0px;
+  height: 71px;
   margin-bottom: -2px;
   z-index: 1000;
   &__logo {
@@ -28,6 +29,10 @@
       border: 0;
       background: transparent;
     }
+  }
+
+  @media (min-width: 750px) and (max-width: 900px) {
+    height: calc(53 / 770 * 100vw);
   }
 
   @media (max-width: 749px) {
