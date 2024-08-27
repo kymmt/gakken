@@ -3,4 +3,11 @@
   padding: 30px 0 20px;
   display: flex;
   justify-content: center;
+  &__logo {
+  }
+  @media (max-width: 749px) {
+    &__logo {
+      max-width: calc(153 / 370 * 100vw);
+    }
+  }
 }
