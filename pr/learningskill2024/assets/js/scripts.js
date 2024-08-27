@@ -13,8 +13,8 @@ window.window.addEventListener("load", function () {
     transitionDuration: "0.6s", // アニメーションの持続時間
   });
   imagesLoaded(".filtr-container", function () {
-    iso.arrange({ filter: "*" });
-    isoBooks.arrange({ filter: "*" });
+    iso.layout();
+    isoBooks.layout();
   });
 
   // フィルターを適用する関数
