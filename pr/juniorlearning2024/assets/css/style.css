@@ -908,6 +908,9 @@ body {
           box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto 10rem;
 }
+.c-block.book-group {
+  margin-bottom: 40px;
+}
 .c-block:last-child {
   margin-bottom: 0;
 }
@@ -1492,23 +1495,6 @@ body {
   }
 }
 
-.kentei {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 5.375%;
-  width: 89.25%;
-  margin: 0 auto;
-  margin-top: -5.5rem;
-}
-.kentei__books {
-  width: 55.4621848739%;
-}
-.kentei__title {
-  color: var(--color-green);
-  text-align: center;
-  margin-bottom: 3.8rem;
-}
 .kentei__title-decoration {
   position: relative;
   display: -webkit-inline-box;
@@ -1524,133 +1510,13 @@ body {
 }
 .kentei__title-decoration::before {
   background: url("../img/bg_kentei_l.png") no-repeat left center/cover;
-  left: -10rem;
+  left: -8rem;
 }
 .kentei__title-decoration::after {
   background: url("../img/bg_kentei_r.png") no-repeat right center/cover;
-  right: -10rem;
-}
-.kentei__book-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-.kentei__book-item {
-  width: auto;
-  height: 24rem;
-}
-.kentei__book-item img {
-  width: auto;
-  max-height: 100%;
-}
-.kentei__book-further {
-  margin-top: auto;
-  text-align: center;
-}
-.kentei__book-lead {
-  display: inline-block;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #00c256;
-  position: relative;
-  margin-bottom: 1.2rem;
-}
-.kentei__book-lead::before, .kentei__book-lead::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 1px;
-  height: 2rem;
-  background: #00c256;
-}
-.kentei__book-lead::before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  left: -1.2rem;
-}
-.kentei__book-lead::after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  right: -1.2rem;
-}
-.kentei__book-link {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  font-size: 1.6rem;
-  font-weight: 700;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  width: 275px;
-  height: 50px;
-  border-radius: 100px;
-  background: #00c256;
-  -webkit-box-shadow: 0px 0px 14px 0px rgba(216, 255, 105, 0.6980392157);
-          box-shadow: 0px 0px 14px 0px rgba(216, 255, 105, 0.6980392157);
-}
-@media (min-width: 750px) and (max-width: 900px) {
-  .kentei {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 77.1428571429vw;
-    gap: 5.5844155844vw;
-    margin: 0 auto;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-  }
-  .kentei__book-list {
-    width: 45.7142857143vw;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    gap: 5.1948051948vw;
-  }
-  .kentei__book-item {
-    height: 28.5714285714vw;
-  }
-  .kentei__book-link {
-    font-size: 1.5584415584vw;
-    width: 25.974025974vw;
-    height: 6.4935064935vw;
-  }
+  right: -8rem;
 }
 @media (max-width: 749px) {
-  .kentei {
-    margin-top: 0rem;
-    display: block;
-    width: 100%;
-  }
-  .kentei__books {
-    width: 48.9189189189vw;
-    margin: 0 auto;
-  }
-  .kentei__book-item {
-    width: auto;
-    height: 28.5714285714vw;
-  }
-  .kentei__book-item img {
-    width: auto;
-    max-height: 100%;
-  }
-  .kentei__title {
-    font-size: 5.6756756757vw;
-    margin-bottom: 9.7297297297vw;
-  }
   .kentei__title-decoration::before, .kentei__title-decoration::after {
     width: 12.1621621622vw;
     height: 6.4864864865vw;
@@ -1669,50 +1535,14 @@ body {
   .c-block__header .kentei__title-decoration::after {
     bottom: 0.2em;
   }
-  .kentei__book-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 10.8108108108vw;
-    width: 45.6756756757vw;
-    margin: 0 auto 10.8108108108vw;
-  }
-  .kentei__book-item {
-    height: auto;
-  }
-  .kentei__book-item img {
-    width: auto;
-    max-height: 100%;
-  }
-  .kentei__book-further {
-    margin-bottom: 0;
-  }
-  .kentei__book-lead {
-    font-size: 4.0540540541vw;
-  }
-  .kentei__book-link {
-    font-size: 4.3243243243vw;
-    width: 76.2162162162vw;
-    height: 13.5135135135vw;
-  }
 }
 
 .drill {
   margin-top: -5rem;
 }
-.drill__books {
-  width: 460px;
-  margin: 0 auto;
-}
 .drill__books.col-3 {
   width: 660px;
+  margin: 0 auto;
 }
 .drill__title {
   text-align: center;
@@ -1740,23 +1570,33 @@ body {
   right: -10rem;
 }
 .drill__book-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  gap: 9rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 457px;
+  gap: 90px;
+  margin: 0 auto;
 }
 .col-3 .drill__book-list {
-  gap: 5.4rem;
+  grid-template-columns: repeat(3, 1fr);
+  width: 660x;
+  row-gap: 55px;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
 }
-.drill__book-item {
-  width: 182px;
+.drill__book-item__image {
+  display: block;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border: 1px solid rgba(0, 0, 0, 0.4);
 }
-.drill__book-item img {
-  width: auto;
-  max-height: 100%;
+.drill__book-item__image img {
+  width: 100%;
 }
 .drill__book-item__image {
   margin-bottom: 2.2rem;
