@@ -1,4 +1,50 @@
-window.window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
+  //スプラッシュ画面の処理
+  const splashScreen = document.querySelector(".splash");
+  const appContent = document.querySelector(".wrapper");
+  const body = document.body;
+
+  let loadingComplete = false;
+  let timeElapsed = false;
+
+  // ウィンドウのロードイベントが完了したら実行
+  window.onload = function () {
+    loadingComplete = true;
+    checkAndHideSplash();
+  };
+
+  // 2秒後に時間経過を確認
+  setTimeout(() => {
+    timeElapsed = true;
+    checkAndHideSplash();
+  }, 2000);
+
+  // ローディング完了と2秒経過の両方が条件を満たしたらスプラッシュ画面を非表示にする
+  function checkAndHideSplash() {
+    if (loadingComplete && timeElapsed) {
+      splashScreen.classList.add("hide");
+      appContent.classList.add("show");
+      body.classList.remove("no-scroll"); // スクロールを再び有効にする
+      animStart();
+    }
+  }
+
+  //ロード後のアニメーション
+  const animStart = () => {
+    // 全ての要素を選択
+    const animatedElements = document.querySelectorAll("[data-animation-delay]");
+
+    animatedElements.forEach((element) => {
+      // data-animation-delayとdata-animation-classの値を取得
+      const delay = parseInt(element.getAttribute("data-animation-delay"), 10);
+      const animationClass = element.getAttribute("data-animation-class");
+
+      // 設定された時間が経過した後でクラスを付与
+      setTimeout(() => {
+        element.classList.add(animationClass);
+      }, delay);
+    });
+  };
   // Isotopeの初期化
   var iso = new Isotope(".filtr-container", {
     itemSelector: ".filtr-item",
