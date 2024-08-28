@@ -65,9 +65,6 @@ window.addEventListener("DOMContentLoaded", function () {
         }, delay);
       }
     });
-
-    // 初期化時にスクロールを無効にする
-    window.addEventListener("touchmove", preventScroll, { passive: false });
   };
   // Isotopeの初期化
   var iso = new Isotope(".filtr-container", {

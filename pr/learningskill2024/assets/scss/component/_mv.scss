@@ -386,17 +386,8 @@ span.fade-in-down {
 }
 .fade-in-up {
   opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.4s;
-  &.anim {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-.fade-in-up-100 {
-  opacity: 0;
   transform: translateY(100px);
-  transition: all 0.8s;
+  transition: all 0.9s;
   &.anim {
     opacity: 1;
     transform: translateY(0%);
