@@ -1,4 +1,75 @@
-window.window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
+  //スプラッシュ画面の処理
+  const splashScreen = document.querySelector(".splash");
+  const appContent = document.querySelector(".wrapper");
+  const body = document.body;
+
+  let loadingComplete = false;
+  let timeElapsed = false;
+
+  // ウィンドウのロードイベントが完了したら実行
+  window.onload = function () {
+    loadingComplete = true;
+    checkAndHideSplash();
+  };
+
+  // 2秒後に時間経過を確認
+  setTimeout(() => {
+    timeElapsed = true;
+    checkAndHideSplash();
+  }, 2000);
+
+  // ローディング完了と2秒経過の両方が条件を満たしたらスプラッシュ画面を非表示にする
+  function checkAndHideSplash() {
+    if (loadingComplete && timeElapsed) {
+      splashScreen.classList.add("hide");
+      appContent.classList.add("show");
+      animStart();
+    }
+  }
+
+  //ロード後のアニメーション
+  const animStart = () => {
+    const animatedElements = document.querySelectorAll("[data-animation-delay]");
+    let animationsCompleted = 0;
+    let totalVisibleElements = 0;
+
+    animatedElements.forEach((element) => {
+      // 要素が表示されているかを確認
+      if (window.getComputedStyle(element).display !== "none") {
+        totalVisibleElements += 1;
+        const delay = parseInt(element.getAttribute("data-animation-delay"), 10);
+        const animationClass = element.getAttribute("data-animation-class");
+
+        // 設定された時間が経過した後でクラスを付与
+        setTimeout(() => {
+          element.classList.add(animationClass);
+
+          // アニメーションが完了した時に呼ばれるイベントリスナーを追加
+          element.addEventListener(
+            "transitionend",
+            () => {
+              // 表示されている要素のみカウント
+              if (window.getComputedStyle(element).display !== "none") {
+                animationsCompleted += 1;
+
+                // すべてのアニメーションが完了したらno-scrollクラスを外す
+                if (animationsCompleted === totalVisibleElements) {
+                  document.body.classList.remove("no-scroll");
+                  document.documentElement.classList.remove("no-scroll");
+                }
+              }
+            },
+            { once: true }
+          );
+        }, delay);
+      }
+    });
+
+    // 初期化時にスクロールを無効にする
+    window.addEventListener("touchmove", preventScroll, { passive: false });
+  };
   // Isotopeの初期化
   var iso = new Isotope(".filtr-container", {
     itemSelector: ".filtr-item",
