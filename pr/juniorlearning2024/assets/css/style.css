@@ -130,6 +130,12 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
 }
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
 
 .wrapper {
   padding-bottom: 100px;
@@ -160,10 +166,7 @@ body {
   z-index: 101;
   width: 100%;
   top: 23px;
-  left: 50%;
   padding: 0 20px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 .l-header__inner {
   margin: 0 auto;
@@ -670,6 +673,10 @@ body {
   width: 731px;
   margin: 0 auto 2.1rem;
 }
+.c-mv__title.hide {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
 .c-mv__lead {
   text-align: center;
   color: #094;
@@ -823,6 +830,66 @@ body {
   }
 }
 
+.scale-in {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.scale-in.anim {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.fade-in-down {
+  opacity: 0;
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.fade-in-down.anim {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+span.fade-in-down {
+  display: inline-block;
+}
+
+.fade-in-up {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.fade-in-up.anim {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.fade-in-up-100 {
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+.fade-in-up-100.anim {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+span.fade-in-up {
+  display: inline-block;
+}
+
 .splash {
   position: fixed;
   top: 0;
@@ -843,6 +910,9 @@ body {
   z-index: 9999;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+.splash__logo {
+  max-width: 54.0540540541vw;
 }
 .splash.hide {
   opacity: 0;

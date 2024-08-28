@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
   //スプラッシュ画面の処理
   const splashScreen = document.querySelector(".splash");
   const appContent = document.querySelector(".wrapper");
@@ -24,26 +25,50 @@ window.addEventListener("DOMContentLoaded", function () {
     if (loadingComplete && timeElapsed) {
       splashScreen.classList.add("hide");
       appContent.classList.add("show");
-      body.classList.remove("no-scroll"); // スクロールを再び有効にする
       animStart();
     }
   }
 
   //ロード後のアニメーション
   const animStart = () => {
-    // 全ての要素を選択
     const animatedElements = document.querySelectorAll("[data-animation-delay]");
+    let animationsCompleted = 0;
+    let totalVisibleElements = 0;
 
     animatedElements.forEach((element) => {
-      // data-animation-delayとdata-animation-classの値を取得
-      const delay = parseInt(element.getAttribute("data-animation-delay"), 10);
-      const animationClass = element.getAttribute("data-animation-class");
+      // 要素が表示されているかを確認
+      if (window.getComputedStyle(element).display !== "none") {
+        totalVisibleElements += 1;
+        const delay = parseInt(element.getAttribute("data-animation-delay"), 10);
+        const animationClass = element.getAttribute("data-animation-class");
 
-      // 設定された時間が経過した後でクラスを付与
-      setTimeout(() => {
-        element.classList.add(animationClass);
-      }, delay);
+        // 設定された時間が経過した後でクラスを付与
+        setTimeout(() => {
+          element.classList.add(animationClass);
+
+          // アニメーションが完了した時に呼ばれるイベントリスナーを追加
+          element.addEventListener(
+            "transitionend",
+            () => {
+              // 表示されている要素のみカウント
+              if (window.getComputedStyle(element).display !== "none") {
+                animationsCompleted += 1;
+
+                // すべてのアニメーションが完了したらno-scrollクラスを外す
+                if (animationsCompleted === totalVisibleElements) {
+                  document.body.classList.remove("no-scroll");
+                  document.documentElement.classList.remove("no-scroll");
+                }
+              }
+            },
+            { once: true }
+          );
+        }, delay);
+      }
     });
+
+    // 初期化時にスクロールを無効にする
+    window.addEventListener("touchmove", preventScroll, { passive: false });
   };
   // Isotopeの初期化
   var iso = new Isotope(".filtr-container", {

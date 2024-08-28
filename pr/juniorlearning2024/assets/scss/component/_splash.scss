@@ -11,6 +11,9 @@
   font-size: 24px;
   z-index: 9999;
   transition: all 0.5s;
+  &__logo {
+    max-width: calc(200 / 370 * 100vw);
+  }
   &.hide {
     opacity: 0;
     visibility: hidden;
