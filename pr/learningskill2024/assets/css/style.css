@@ -431,6 +431,9 @@ body.no-scroll {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+.splash__logo {
+  max-width: 54.0540540541vw;
+}
 .splash.hide {
   opacity: 0;
   visibility: hidden;
