@@ -56,6 +56,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
                 // すべてのアニメーションが完了したらno-scrollクラスを外す
                 if (animationsCompleted === totalVisibleElements) {
+                  iso.layout();
+                  isoBooks.layout();
                   document.body.classList.remove("no-scroll");
                   document.documentElement.classList.remove("no-scroll");
                 }
