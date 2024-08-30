@@ -77,6 +77,9 @@ window.addEventListener("DOMContentLoaded", function () {
     iso.layout();
   });
 
+  window.addEventListener("resize", function () {
+    iso.layout();
+  });
   // フィルターを適用する関数
   function applyFilter(filterValue) {
     if (filterValue === "*") {

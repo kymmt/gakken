@@ -28,6 +28,12 @@ html {
   &:hover {
     opacity: 0.6;
   }
+
+  @media (max-width: 749px) {
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 .txt-center {
   text-align: center;
@@ -1270,7 +1276,6 @@ html {
     visibility: visible;
   }
   @media (max-width: 749px) {
-    position: relative;
     width: 100%;
     margin-right: 0;
     bottom: 0;
@@ -1291,9 +1296,9 @@ html {
   text-align: center;
   text-decoration: none;
   @media (max-width: 749px) {
-    top: calc(14 / 370 * 100vw);
-    right: calc(27 / 370 * 100vw);
-    color: #fff;
+    top: auto;
+    bottom: calc(4 / 370 * 100vw);
+    right: calc(16 / 370 * 100vw);
     width: calc(46 / 370 * 100vw);
     font-size: calc(9 / 370 * 100vw);
   }

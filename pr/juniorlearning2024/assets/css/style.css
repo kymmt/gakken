@@ -947,6 +947,11 @@ html {
 .hover-fade:hover {
   opacity: 0.6;
 }
+@media (max-width: 749px) {
+  .hover-fade:hover {
+    opacity: 1;
+  }
+}
 
 .txt-center {
   text-align: center;
@@ -2187,7 +2192,6 @@ html {
 }
 @media (max-width: 749px) {
   .back-to-top-container {
-    position: relative;
     width: 100%;
     margin-right: 0;
     bottom: 0;
@@ -2215,9 +2219,9 @@ html {
 }
 @media (max-width: 749px) {
   .back-to-top {
-    top: 3.7837837838vw;
-    right: 7.2972972973vw;
-    color: #fff;
+    top: auto;
+    bottom: 1.0810810811vw;
+    right: 4.3243243243vw;
     width: 12.4324324324vw;
     font-size: 2.4324324324vw;
   }

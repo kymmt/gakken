@@ -37,6 +37,11 @@ html {
   &:hover {
     opacity: 0.6;
   }
+  @media (max-width: 749px) {
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 @media (max-width: 749px) {
   .sm\:block {
@@ -312,6 +317,14 @@ html {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+  }
+  &__recommend-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 23px;
+    & + .c-block__intro {
+      margin-bottom: 53px;
+    }
   }
 
   &__intro {
@@ -592,6 +605,10 @@ html {
           text-indent: -2.5em;
         }
       }
+    }
+    &__recommend-title {
+      margin: 0 auto calc(28 / 370 * 100vw);
+      width: calc(172 / 370 * 100vw);
     }
     &__content {
       margin-bottom: calc(25 / 370 * 100vw);
@@ -882,9 +899,7 @@ html {
     visibility: visible;
   }
   @media (max-width: 749px) {
-    position: relative;
     width: 100%;
-    margin-right: 0;
     bottom: 0;
   }
 }
@@ -904,9 +919,9 @@ html {
   text-align: center;
   text-decoration: none;
   @media (max-width: 749px) {
-    top: calc(14 / 370 * 100vw);
-    right: calc(17 / 370 * 100vw);
-    color: #fff;
+    top: auto;
+    bottom: 5px;
+    right: calc(20 / 370 * 100vw);
     width: calc(46 / 370 * 100vw);
     font-size: calc(9 / 370 * 100vw);
   }
