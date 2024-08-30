@@ -925,6 +925,10 @@ span.fade-in-up {
   visibility: visible;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 [href="#"] {
   display: block;
   position: relative;

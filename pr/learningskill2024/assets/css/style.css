@@ -131,6 +131,7 @@ img {
 
 html {
   font-size: 62.5%;
+  overflow: auto;
 }
 
 body {
@@ -150,8 +151,8 @@ body.no-scroll {
 }
 .wrapper__inner {
   background: #f8f6ea;
-  overflow: hidden;
   padding: 0 0px;
+  overflow: hidden;
 }
 @media (min-width: 750px) and (max-width: 900px) {
   .wrapper {
@@ -870,6 +871,10 @@ span.fade-in-up {
   display: inline-block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 [href="#"] {
   display: block;
   position: relative;
@@ -1264,6 +1269,9 @@ span.fade-in-up {
 .c-block__content__body p:last-child {
   margin-bottom: 0;
 }
+.c-block__content__body p.note {
+  font-size: 1.4rem;
+}
 .c-block__content__body .strong {
   color: #2fbc22;
   font-weight: bold;
@@ -1411,8 +1419,11 @@ span.fade-in-up {
     font-size: 2.0779220779vw;
     padding: 0 5.1948051948vw 0 2.4675324675vw;
   }
-  .c-block__content__body .strong {
+  .c-block__content__body p.strong {
     font-size: 2.3376623377vw;
+  }
+  .c-block__content__body p.note {
+    font-size: 1.6883116883vw;
   }
   .c-block__content__list {
     margin-top: 1.5584415584vw;
@@ -1534,8 +1545,11 @@ span.fade-in-up {
     padding: 0;
     margin-bottom: 9.4594594595vw;
   }
-  .c-block__content__body .strong {
+  .c-block__content__body p.strong {
     font-size: 5.4054054054vw;
+  }
+  .c-block__content__body p.note {
+    font-size: 3.5135135135vw;
   }
   .c-block__content__list {
     margin-top: 4.8648648649vw;

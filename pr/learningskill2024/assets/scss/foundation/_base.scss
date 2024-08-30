@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  overflow: auto;
 }
 
 body {
@@ -11,15 +12,14 @@ body {
     overflow: hidden;
   }
 }
-
 .wrapper {
   background: var(--color-green);
   position: relative;
   padding: 0 20px;
   &__inner {
     background: #f8f6ea;
-    overflow: hidden;
     padding: 0 0px;
+    overflow: hidden;
   }
   @media (min-width: 750px) and (max-width: 900px) {
     padding: 0 calc(10 / 770 * 100vw);

@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
   //スプラッシュ画面の処理
   const splashScreen = document.querySelector(".splash");
   const appContent = document.querySelector(".wrapper");
@@ -80,6 +81,10 @@ window.addEventListener("DOMContentLoaded", function () {
     transitionDuration: "0.6s", // アニメーションの持続時間
   });
   imagesLoaded(".filtr-container", function () {
+    iso.layout();
+    isoBooks.layout();
+  });
+  window.addEventListener("resize", function () {
     iso.layout();
     isoBooks.layout();
   });
@@ -220,7 +225,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  document.addEventListener("scroll", function () {
+  window.addEventListener("scroll", function () {
     const backToTop = document.querySelector(".back-to-top-container");
     if (window.scrollY > 200) {
       backToTop.classList.add("show");

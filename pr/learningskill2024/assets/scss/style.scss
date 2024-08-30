@@ -6,7 +6,9 @@
 @import "component/hamburger";
 @import "component/splash";
 @import "component/mv";
-
+html {
+  scroll-behavior: smooth;
+}
 [href="#"] {
   display: block;
   position: relative;
@@ -359,6 +361,9 @@
         &:last-child {
           margin-bottom: 0;
         }
+        &.note {
+          font-size: 1.4rem;
+        }
       }
 
       .strong {
@@ -502,8 +507,11 @@
       &__body {
         font-size: calc(16 / 770 * 100vw);
         padding: 0 calc(40 / 770 * 100vw) 0 calc(19 / 770 * 100vw);
-        .strong {
+        p.strong {
           font-size: calc(18 / 770 * 100vw);
+        }
+        p.note {
+          font-size: calc(13 / 770 * 100vw);
         }
       }
       &__list {
@@ -623,8 +631,11 @@
         font-size: calc(16 / 370 * 100vw);
         padding: 0;
         margin-bottom: calc(35 / 370 * 100vw);
-        .strong {
+        p.strong {
           font-size: calc(20 / 370 * 100vw);
+        }
+        p.note {
+          font-size: calc(13 / 370 * 100vw);
         }
       }
       &__list {

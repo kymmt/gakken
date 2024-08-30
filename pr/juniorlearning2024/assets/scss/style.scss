@@ -8,6 +8,10 @@
 @import "./component/mv";
 @import "./component/splash";
 
+html {
+  scroll-behavior: smooth;
+}
+
 [href="#"] {
   display: block;
   position: relative;
