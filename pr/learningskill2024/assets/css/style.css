@@ -1830,6 +1830,11 @@ html {
   opacity: 1;
   visibility: visible;
 }
+@media (min-width: 750px) and (max-width: 900px) {
+  .back-to-top-container {
+    margin-right: 30px;
+  }
+}
 @media (max-width: 749px) {
   .back-to-top-container {
     width: 100%;
@@ -1866,11 +1871,5 @@ html {
     right: 5.4054054054vw;
     width: 12.4324324324vw;
     font-size: 2.4324324324vw;
-  }
-}
-
-@media (min-width: 750px) and (max-width: 900px) {
-  .back-to-top-container {
-    display: none;
   }
 }
