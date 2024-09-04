@@ -1834,6 +1834,12 @@ html {
   background: url("../img/bg_kentei_r.webp") no-repeat right center/cover;
   right: -8rem;
 }
+.c-block__header .kentei__title-decoration::before {
+  top: 0.1em;
+}
+.c-block__header .kentei__title-decoration::after {
+  bottom: 0.1em;
+}
 @media (max-width: 749px) {
   .kentei__title-decoration::before, .kentei__title-decoration::after {
     width: 12.1621621622vw;
@@ -1847,6 +1853,9 @@ html {
     background: url("../img/bg_kentei_r.webp") no-repeat right bottom/cover;
     right: -16.2162162162vw;
   }
+  .kentei__title-decoration.diagonal::after {
+    bottom: 0em;
+  }
   .c-block__header .kentei__title-decoration::before {
     top: 0.2em;
   }
@@ -1856,7 +1865,7 @@ html {
 }
 
 .drill {
-  margin-top: -5rem;
+  margin-top: -1rem;
 }
 .drill__books.col-3 {
   width: 660px;
@@ -1886,6 +1895,12 @@ html {
 .drill__title-decoration::after {
   background: url("../img/bg_drill_r.webp") no-repeat right center/cover;
   right: -10rem;
+}
+.c-block__header .drill__title-decoration::before {
+  top: 0.2em;
+}
+.c-block__header .drill__title-decoration::after {
+  bottom: 0.1em;
 }
 .drill__book-list {
   display: grid;

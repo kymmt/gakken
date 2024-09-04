@@ -898,6 +898,14 @@ html {
       background: url("../img/bg_kentei_r.webp") no-repeat right center / cover;
       right: -8rem;
     }
+    .c-block__header & {
+      &::before {
+        top: 0.1em;
+      }
+      &::after {
+        bottom: 0.1em;
+      }
+    }
   }
 
   @media (max-width: 749px) {
@@ -915,6 +923,11 @@ html {
         background: url("../img/bg_kentei_r.webp") no-repeat right bottom / cover;
         right: calc(-60 / 370 * 100vw);
       }
+      &.diagonal {
+        &::after {
+          bottom: 0em;
+        }
+      }
       .c-block__header & {
         &::before {
           top: 0.2em;
@@ -929,7 +942,7 @@ html {
 
 //ドリル
 .drill {
-  margin-top: -5rem;
+  margin-top: -1rem;
 
   &__books {
     &.col-3 {
@@ -962,6 +975,14 @@ html {
     &::after {
       background: url("../img/bg_drill_r.webp") no-repeat right center / cover;
       right: -10rem;
+    }
+    .c-block__header & {
+      &::before {
+        top: 0.2em;
+      }
+      &::after {
+        bottom: 0.1em;
+      }
     }
   }
 
