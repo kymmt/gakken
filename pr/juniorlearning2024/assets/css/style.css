@@ -353,10 +353,11 @@ body.no-scroll {
   background: url("../img/obj_3.webp") no-repeat;
 }
 .bg-obj.obj4 {
-  bottom: 900ox;
+  bottom: 900px;
   left: calc(50% - 654px);
   width: 181px;
   height: 414px;
+  z-index: 10;
   background: url("../img/obj_4.webp") no-repeat;
 }
 .bg-obj.obj5 {
