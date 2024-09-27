@@ -29,10 +29,3 @@ body {
       #e2f4f3 url("../img/bg_wave_mid_bottom.webp") no-repeat center bottom;
   }
 }
-@media (max-width: 749px) {
-  .wrapper {
-    &::after {
-      display: none;
-    }
-  }
-}

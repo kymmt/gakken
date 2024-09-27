@@ -152,11 +152,6 @@ body.no-scroll {
   background: url("../img/bg_wave_mid_top.webp") no-repeat center top, #e2f4f3 url("../img/bg_wave_mid_bottom.webp") no-repeat center bottom;
 }
 
-@media (max-width: 749px) {
-  .wrapper::after {
-    display: none;
-  }
-}
 :root {
   --color-green: #009944;
   --color-lower-elementary: #e9b32c;
