@@ -28,14 +28,6 @@ body {
     background: url("../img/bg_wave_mid_top.webp") no-repeat center top,
       #e2f4f3 url("../img/bg_wave_mid_bottom.webp") no-repeat center bottom;
   }
-  &::after {
-    position: absolute;
-    bottom: 0;
-    content: "";
-    width: 100%;
-    height: 1481px;
-    background: #e2f4f3 url("../img/bg_wave_bottom.webp") no-repeat center top / 100% auto;
-  }
 }
 @media (max-width: 749px) {
   .wrapper {

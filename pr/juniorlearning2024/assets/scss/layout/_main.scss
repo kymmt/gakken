@@ -30,7 +30,7 @@
   }
   &.obj4 {
     //top: 3347px;
-    bottom: 900px;
+    bottom: 900ox;
     left: calc(50% + (66px - (1440px / 2)));
     width: 181px;
     height: 414px;
@@ -106,5 +106,20 @@
     width: 690px;
     height: 690px;
     background: url("../img/obj_14.webp") no-repeat;
+  }
+  &.bg-bottom {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    height: 1156px;
+    background: #e2f4f3;
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 100%;
+      width: 100%;
+      height: 334px;
+      background: url("../img/bg_wave_bottom.png") no-repeat center bottom / 100% auto;
+    }
   }
 }
