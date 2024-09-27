@@ -1,5 +1,6 @@
 .l-main {
   position: relative;
+  z-index: 2;
 }
 .bg-obj {
   position: absolute;
@@ -28,7 +29,8 @@
     background: url("../img/obj_3.webp") no-repeat;
   }
   &.obj4 {
-    top: 3347px;
+    //top: 3347px;
+    bottom: 900px;
     left: calc(50% + (66px - (1440px / 2)));
     width: 181px;
     height: 414px;

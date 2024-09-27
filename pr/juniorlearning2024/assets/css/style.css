@@ -141,7 +141,7 @@ body.no-scroll {
   padding-bottom: 100px;
   position: relative;
   overflow: hidden;
-  background: #fafbe1 url("../img/bg_wave_bottom.webp") no-repeat center bottom/100% auto;
+  background: #fafbe1;
 }
 .wrapper::before {
   position: absolute;
@@ -151,7 +151,20 @@ body.no-scroll {
   height: 2933px;
   background: url("../img/bg_wave_mid_top.webp") no-repeat center top, #e2f4f3 url("../img/bg_wave_mid_bottom.webp") no-repeat center bottom;
 }
+.wrapper::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 1481px;
+  background: #e2f4f3 url("../img/bg_wave_bottom.webp") no-repeat center top/100% auto;
+}
 
+@media (max-width: 749px) {
+  .wrapper::after {
+    display: none;
+  }
+}
 :root {
   --color-green: #009944;
   --color-lower-elementary: #e9b32c;
@@ -321,6 +334,7 @@ body.no-scroll {
 
 .l-main {
   position: relative;
+  z-index: 2;
 }
 
 .bg-obj {
@@ -352,7 +366,7 @@ body.no-scroll {
   background: url("../img/obj_3.webp") no-repeat;
 }
 .bg-obj.obj4 {
-  top: 3347px;
+  bottom: 900px;
   left: calc(50% - 654px);
   width: 181px;
   height: 414px;
