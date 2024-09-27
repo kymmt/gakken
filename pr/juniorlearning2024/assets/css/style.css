@@ -444,7 +444,7 @@ body.no-scroll {
   content: "";
   bottom: 100%;
   width: 100%;
-  height: 334px;
+  height: 23.1944444444vw;
   background: url("../img/bg_wave_bottom.png") no-repeat center bottom/100% auto;
 }
 

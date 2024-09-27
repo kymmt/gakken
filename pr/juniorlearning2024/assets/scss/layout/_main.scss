@@ -119,7 +119,7 @@
       content: "";
       bottom: 100%;
       width: 100%;
-      height: 334px;
+      height: calc(334 / 1440 * 100vw);
       background: url("../img/bg_wave_bottom.png") no-repeat center bottom / 100% auto;
     }
   }
